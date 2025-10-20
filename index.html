@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Local Singles Near You</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 500px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      padding: 30px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .question {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+    button {
+      background: #ff3366;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #e02e5c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Meet Singles Near You 💘</h1>
+    <p>Answer a few quick questions to find your perfect match!</p>
+
+    <div class="question active" id="q1">
+      <p>1. Are you looking for men or women?</p>
+      <button onclick="nextQuestion('q2')">Men</button>
+      <button onclick="nextQuestion('q2')">Women</button>
+    </div>
+
+    <div class="question" id="q2">
+      <p>2. What’s your age group?</p>
+      <button onclick="nextQuestion('q3')">18–25</button>
+      <button onclick="nextQuestion('q3')">26–35</button>
+      <button onclick="nextQuestion('q3')">36+</button>
+    </div>
+
+    <div class="question" id="q3">
+      <p>3. Ready to see singles near you?</p>
+      <button onclick="redirect()">Yes, show me!</button>
+    </div>
+  </div>
+
+  <script>
+    function nextQuestion(id) {
+      document.querySelectorAll('.question').forEach(q => q.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function redirect() {
+      // 🔗 ВСТАВ СВОЮ СМАРТЛІНКУ ТУТ:
+      window.location.href = "https://YOUR_SMARTLINK_HERE.com";
+    }
+  </script>
+</body>
+</html>
+
+
+  
