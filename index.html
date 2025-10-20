@@ -3,31 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Find Local Singles Near You</title>
+  <title>Find Love Near You 💘</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      color: #222;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: url('https://cdn.create.vista.com/api/media/small/176137262/stock-photo-young-man-embracing-kissing-his-girlfriend-bed') no-repeat center center/cover;
+      color: #fff;
       margin: 0;
       padding: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: 0;
     }
     .container {
-      max-width: 500px;
-      margin: 40px auto;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      padding: 30px;
+      position: relative;
+      z-index: 1;
+      max-width: 420px;
+      width: 90%;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 18px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 30px rgba(0,0,0,0.3);
+      padding: 35px 25px;
       text-align: center;
     }
     h1 {
-      font-size: 24px;
+      font-size: 26px;
       margin-bottom: 10px;
+      color: #fff;
     }
     p {
-      font-size: 16px;
-      margin-bottom: 20px;
+      font-size: 17px;
+      margin-bottom: 25px;
+      color: #f1f1f1;
     }
     .question {
       display: none;
@@ -36,27 +52,31 @@
       display: block;
     }
     button {
-      background: #ff3366;
+      background: linear-gradient(135deg, #ff5f88, #ff2e63);
       color: white;
       border: none;
-      border-radius: 8px;
-      padding: 12px 20px;
+      border-radius: 10px;
+      padding: 12px 25px;
       font-size: 16px;
+      margin: 6px;
       cursor: pointer;
       transition: 0.3s;
+      width: 80%;
     }
     button:hover {
-      background: #e02e5c;
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #ff7499, #ff406f);
     }
   </style>
 </head>
 <body>
+  <div class="overlay"></div>
   <div class="container">
-    <h1>Meet Singles Near You 💘</h1>
-    <p>Answer a few quick questions to find your perfect match!</p>
+    <h1>Find Love Near You 💘</h1>
+    <p>Answer a few quick questions to see your best matches!</p>
 
     <div class="question active" id="q1">
-      <p>1. Are you looking for men or women?</p>
+      <p>1. Who are you looking for?</p>
       <button onclick="nextQuestion('q2')">Men</button>
       <button onclick="nextQuestion('q2')">Women</button>
     </div>
@@ -69,7 +89,7 @@
     </div>
 
     <div class="question" id="q3">
-      <p>3. Ready to see singles near you?</p>
+      <p>3. Ready to meet people in your area?</p>
       <button onclick="redirect()">Yes, show me!</button>
     </div>
   </div>
@@ -87,6 +107,8 @@
   </script>
 </body>
 </html>
+
+
 
 
   
